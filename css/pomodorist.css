@@ -41,41 +41,11 @@ footer {
     border-top: 1px solid red;
 }
 
-#timer {
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    font-size: 300%;
-}
-
-#leftUp {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-}
-
-#leftDown {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-}
-
-
-
-/* css for to-do list*/
-
-.wrapper {
-    padding-top: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    height: 100%;
-    background-color: #fff;
-}
-
 h1 {
     text-transform: uppercase;
     font-weight: 700;
     color: #2c3e50;
+    margin: 15px;
 }
 
 input {
@@ -84,12 +54,13 @@ input {
     color: #212121;
     border: 1px solid #d2d2d2;
     border-radius: 5px 5px 5px 5px;
+    max-width: 90%;
 }
 
 button {
     padding: 10px;
     border: 0 none;
-    border-radius: 2px 2px 2px 2px;
+    border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
     cursor: pointer;
     font-weight: 800;
@@ -133,4 +104,89 @@ li {
     list-style: none;
     font-size: 12px;
     padding: 4px;
+}
+
+#plus {
+    background-color: #46b98a;
+    margin-right: 30px;
+}
+
+#plus:hover {
+    background-color: #3fa67c;
+}
+
+#minus {
+    background-color: #E0645C;
+    margin-left: 30px;
+}
+
+#minus:hover {
+    background-color: #c95a52;
+}
+
+#todoList {
+    padding-top: 20px;
+    max-width: 50%;
+    max-height: 75%;
+    margin: 0 auto;
+    background-color: #fff;
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    opacity: 0.8;
+}
+
+#timerRight {
+    position: absolute;
+    top: 15%;
+    right: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #fff;
+    height: 500px;
+    width: 500px;
+    border: 2px solid red;
+    opacity: 0.8;
+    color: black;
+}
+
+#control-panel {
+    margin-top: 80px;
+}
+
+#pomodoro {
+    margin-top: 80px;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    border: 5px solid #cc0000;
+    margin-left: 160px;
+    line-height: 65px;
+    font-size: 30px;
+    padding-top: 15px;
+    background-color: #ff1a1a;
+}
+
+#pomodoro:hover {
+    background-color: #cc0000;
+    cursor: pointer;
+}
+
+#reset {
+    margin-top: 35px;
+}
+
+#timer {
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 1px 1px white;
+}
+
+#resetBtn {
+    background-color: #ff1a1a;
+    color: black;
+}
+
+#resetBtn:hover {
+    background-color: #cc0000;
 }

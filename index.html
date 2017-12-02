@@ -18,16 +18,45 @@
         <img src="img/logo.png">
         <h4>Frequent <font color="red">BREAKS</font> and clearly defined <font color="red">TASKS</font> are fundamental to good <font color="red">TIME-MANAGEMENT!</font></h4>
     </header>
-    <div class="wrapper">
-        <div class="border">
-            <h1>To do list:<h1>
-      		<input type="text" id="text" placeholder="Add stuff..">
-      		<button id="add">Add</button>
-      		<button id="removeAll">Remove all</button>
-      		<ul id="list"></ul>
-    	</div>
+    <!-- to-do list -->
+    <div id="todoList">
+        <h1>To do list:<h1>
+            <input type="text" id="text" placeholder="Add your activities..." autofocus>
+            <button id="add">Add</button>
+            <button id="removeAll">Remove all</button>
+            <ul id="list"></ul> 
     </div>
-    <p id="timer"></p>
+    <!-- complex timer with buttons -->
+    <div id="timerRight">
+        <div id="control-panel">
+            <table align="center">
+            <tr>
+                <td>BREAK</td>
+                <td>WORK</td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="minus" onclick="breakMinus()">-</button> <span id="break-length">5</span> 
+                    <button id="plus" onclick="breakPlus()">+</button>
+                </td>
+                <td>
+                    <button id="minus" onclick="sessionMinus()">-</button> <span id="session-length">25</span> 
+                    <button id="plus" onclick="sessionPlus()">+</button>
+                </td>
+            </tr>
+            </table>
+        </div>
+        <div id="pomodoro" onclick="toggleTimer()">
+            <div class="pomoinner">
+                <p id="title">Work time</p>
+                <p id="timer">25</p>
+                <span id="fill"></span>
+            </div>
+        </div>
+        <div id="reset">
+            <p><button id="resetBtn" onclick="reset()">RESET</button></p>
+        </div>
+    </div>
     <footer>
         <h5>This page is inspired by <font color="red">"Pomodoro technique"</font> that uses a timer to brake down work into intervals of 25 minutes, separated by 5-minutes breaks. After four cycle (25 + 5), take a longer brake (15-30 minutes), then repeat all until the work is done. &#9745;</h5>
     </footer>
