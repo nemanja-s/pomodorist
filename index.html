@@ -8,12 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <link rel="stylesheet" href="css/pomodorist.css" type="text/css">
 </head>
 
 <body>
-    <h1>Pomodoro timer</h1>
+    <header>
+        <img src="img/logo.png">
+        <h4>Frequent <font color="red">BREAKS</font> and clearly defined <font color="red">TASKS</font> are fundamental to good <font color="red">TIME-MANAGEMENT!</font></h4>
+    </header>
+    <div class="wrapper">
+        <div class="border">
+            <h1>To do list:<h1>
+      		<input type="text" id="text" placeholder="Add stuff..">
+      		<button id="add">Add</button>
+      		<button id="removeAll">Remove all</button>
+      		<ul id="list"></ul>
+    	</div>
+    </div>
     <p id="timer"></p>
+    <footer>
+        <h5>This page is inspired by <font color="red">"Pomodoro technique"</font> that uses a timer to brake down work into intervals of 25 minutes, separated by 5-minutes breaks. After four cycle (25 + 5), take a longer brake (15-30 minutes), then repeat all until the work is done. &#9745;</h5>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

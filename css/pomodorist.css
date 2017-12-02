@@ -1,0 +1,136 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 75px;
+    background: black;
+    opacity: 0.7;
+    text-align: center;
+    border-bottom: 1px solid red;
+}
+
+header img {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    left: 2px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 75px;
+    background: black;
+    opacity: 0.7;
+    text-align: center;
+    border-top: 1px solid red;
+}
+
+#timer {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    font-size: 300%;
+}
+
+#leftUp {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+#leftDown {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+
+
+/* css for to-do list*/
+
+.wrapper {
+    padding-top: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: #fff;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    color: #212121;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px 5px 5px 5px;
+}
+
+button {
+    padding: 10px;
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+button#add {
+    background-color: #46b98a;
+}
+
+button#add:hover {
+    background-color: #3fa67c;
+}
+
+button#removeAll {
+    background-color: #E0645C;
+}
+
+button#removeAll:hover {
+    background-color: #c95a52;
+}
+
+button.removeMe {
+    padding: 5px;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+button.removeMe:hover {
+    background-color: #46b98a;
+}
+
+ul#list {
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+li {
+    list-style: none;
+    font-size: 12px;
+    padding: 4px;
+}
