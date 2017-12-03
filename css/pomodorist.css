@@ -41,7 +41,7 @@ footer {
     border-top: 1px solid red;
 }
 
-h1 {
+h2 {
     text-transform: uppercase;
     font-weight: 700;
     color: #2c3e50;
@@ -63,6 +63,14 @@ input::-webkit-input-placeholder {
     font-size: 20px;
     line-height: 3;
 }
+
+
+
+
+
+
+
+/* Buttons */
 
 button {
     padding: 10px;
@@ -102,34 +110,32 @@ button.removeMe:hover {
     background-color: #46b98a;
 }
 
-ul#list {
-    margin: 0;
-    padding: 20px 0 0 0;
-}
-
-li {
-    list-style: none;
-    font-size: 12px;
-    padding: 4px;
-}
-
-#plus {
+button#plus {
     background-color: #46b98a;
     margin-right: 30px;
 }
 
-#plus:hover {
+button#plus:hover {
     background-color: #3fa67c;
 }
 
-#minus {
+button#minus {
     background-color: #E0645C;
     margin-left: 30px;
 }
 
-#minus:hover {
+button#minus:hover {
     background-color: #c95a52;
 }
+
+
+
+
+
+
+
+
+/* left side of page - todo */
 
 #todoList {
     padding-top: 20px;
@@ -142,6 +148,26 @@ li {
     left: 10px;
     opacity: 0.8;
 }
+
+ul#list {
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+li {
+    list-style: none;
+    font-size: 12px;
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+/* right side of page - timer */
 
 #timerRight {
     position: fixed;

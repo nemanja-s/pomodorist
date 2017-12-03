@@ -1,29 +1,26 @@
 // functions for to-do list
-var ul = document.getElementById('list'),
-    removeAll = document.getElementById('removeAll'),
-    add = document.getElementById('add');
+var ul = document.getElementById("list");
+var removeAll = document.getElementById("removeAll");
+var add = document.getElementById("add");
 
 function addLi(targetUl) {
-    var inputText = document.getElementById('text').value,
-        li = document.createElement('li'),
-        textNode = document.createTextNode(inputText + ' '),
-        removeButton = document.createElement('button');
-
-    if (inputText.split(' ').join('').length === 0) {
-        //     Check for empty inputs (only spaces are not enough)
-        alert('No input');
+    var inputText = document.getElementById("text").value;
+    var li = document.createElement("li");
+    var textNode = document.createTextNode(inputText);
+    var removeButton = document.createElement("button");
+    // check for empty inputs
+    if (inputText.split(" ").join("").length === 0) {
+        alert("Please enter your activity");
         return false;
     }
 
-    removeButton.className = 'removeMe';
-    removeButton.innerHTML = ' DONE!';
-    removeButton.setAttribute('onclick', 'removeMe(this);');
+    removeButton.className = "removeMe";
+    removeButton.innerHTML = " DONE!";
+    removeButton.setAttribute("onclick", "removeMe(this);");
 
     li.appendChild(textNode);
     li.appendChild(removeButton);
-
     targetUl.appendChild(li);
-
 }
 
 function removeMe(item) {
@@ -36,16 +33,12 @@ add.onclick = function() {
 };
 
 removeAll.onclick = function() {
-    ul.innerHTML = '';
+    ul.innerHTML = "";
 };
 
 // functions for pomodoro timer
 (function() {
-
-    "use strict";
-
-
-    // Initialisation
+    // initialisation
     var breakLength = 300;
     var sessionLength = 1500;
     var clockTime = sessionLength;
@@ -53,7 +46,7 @@ removeAll.onclick = function() {
     var onBreak = false;
     var CLOCK_PIXEL_HEIGHT = 286;
 
-    // Setters / Getters
+    // setters / getters
     function setBreakLength(newLength) {
         breakLength = (newLength <= 0) ? 0 : newLength;
         notify();
@@ -73,7 +66,7 @@ removeAll.onclick = function() {
         return clockTime;
     }
 
-    // Timer
+    // timer
     var intervalTimer;
 
     window.toggleTimer = function() {
@@ -106,9 +99,7 @@ removeAll.onclick = function() {
         startTimer();
     }
 
-    /*
-      Controls
-    */
+    // controls
 
     window.breakMinus = function() {
         incrementBreakLength(-60);
@@ -131,7 +122,7 @@ removeAll.onclick = function() {
     };
 
 
-    // Increment break length. If on break, and timer paused, reset clock to new length.
+    // increment break length. If on break, and timer paused, reset clock to new length.
     function incrementBreakLength(increment) {
         setBreakLength(breakLength + increment);
         if (timerPaused && onBreak) {
@@ -139,7 +130,7 @@ removeAll.onclick = function() {
         }
     }
 
-    // Increment session length. If in session, and timer paused, reset clock to new length.
+    // increment session length. If in session, and timer paused, reset clock to new length.
     function incrementSessionLength(increment) {
         setSessionLength(sessionLength + increment);
         if (timerPaused && !onBreak) {
@@ -147,27 +138,25 @@ removeAll.onclick = function() {
         }
     }
 
-    /*
-      Update View Function
-    */
+    // update view function
     var notify = (function() {
         var prevBreakLength;
         var prevSessionLength;
 
         return function() {
-            // Just always update clock.
+            // just always update clock.
             document.getElementById('timer').innerHTML = formatClockDisplay();
             document.getElementById('title').innerHTML = onBreak ? 'Break' : 'Work time';
             document.getElementById('fill').style.backgroundColor = onBreak ? 'red' : 'green';
             document.getElementById('fill').style.height = fillHeight();
 
-            // Update Break Length
+            // update Break Length
             if (prevBreakLength !== breakLength) {
                 document.getElementById('break-length').innerHTML = breakLength / 60;
                 prevBreakLength = breakLength;
             }
 
-            // Update Session Length
+            // update session length
             if (prevSessionLength !== sessionLength) {
                 document.getElementById('session-length').innerHTML = sessionLength / 60;
                 prevSessionLength = sessionLength;
@@ -175,9 +164,7 @@ removeAll.onclick = function() {
         };
 
     })();
-    /*
-      Helpers
-    */
+    // helpers
     function formatClockDisplay() {
         var time = getClockTime();
         var mins = Math.floor(time / 60);
