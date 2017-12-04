@@ -69,7 +69,7 @@ removeAll.onclick = function() {
     // timer
     var intervalTimer;
 
-    window.toggleTimer = function() {
+    toggleTimer = function() {
         timerPaused = !timerPaused;
         if (!timerPaused) startTimer();
         else stopTimer();
@@ -100,27 +100,25 @@ removeAll.onclick = function() {
     }
 
     // controls
-
-    window.breakMinus = function() {
+    breakMinus = function() {
         incrementBreakLength(-60);
     };
-    window.breakPlus = function() {
+    breakPlus = function() {
         incrementBreakLength(60);
     };
-    window.sessionMinus = function() {
+    sessionMinus = function() {
         incrementSessionLength(-60);
     };
-    window.sessionPlus = function() {
+    sessionPlus = function() {
         incrementSessionLength(60);
     };
 
-    window.reset = function() {
+    reset = function() {
         stopTimer();
         timerPaused = true;
         onBreak = false;
         setClockTime(sessionLength);
     };
-
 
     // increment break length. If on break, and timer paused, reset clock to new length.
     function incrementBreakLength(increment) {
@@ -190,10 +188,4 @@ removeAll.onclick = function() {
         };
 
     })();
-
-    // init view
-    document.addEventListener("DOMContentLoaded", function() {
-        notify();
-    }, false);
-
 })();
