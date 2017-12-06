@@ -8,6 +8,16 @@ function addLi(targetUl) {
     var li = document.createElement("li");
     var textNode = document.createTextNode(inputText);
     var removeButton = document.createElement("button");
+
+    // prevent duplicate
+    var enteredLi = ul.getElementsByTagName("li");
+    for (i = 0; i < enteredLi.length; i++) {
+        if (inputText === enteredLi[i].firstChild.textContent) {
+            alert("You already type this activity!");
+            return;
+        }
+    }
+
     // check for empty inputs
     if (inputText.split(" ").join("").length === 0) {
         alert("Please enter your activity");
@@ -22,6 +32,7 @@ function addLi(targetUl) {
     li.appendChild(removeButton);
     targetUl.appendChild(li);
 }
+
 
 function removeMe(item) {
     var parent = item.parentElement;
